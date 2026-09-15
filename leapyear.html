@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let year=Number(prompt("Enter year"));
+    if(year<=0){
+        console.log("enter valid Year");
+    }
+    else{
+        if((year%4==0 && year%100!==0) || (year%400==0)){
+            console.log(+year+ " This is the leap Year")
+        }
+        else{
+            console.log(+year+ " Normal Year")
+        }
+    }
+   </script>
+</body>
+</html>

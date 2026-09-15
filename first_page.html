@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cloudflare.com">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2Lw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+ <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
+  <!-- <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        /* Hero Section */
+
+.hero-section {
+    min-height: 450px;
+
+    background-image: url("img/2.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+   padding: 60px 0;
+}
+
+.card {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+.img1 img{
+    width: 50%;
+    height: 20%;
+}
+.img1 {
+    border-radius: 20px; /* Apni marzi ke mutabiq value change kar lein */
+    object-fit: cover;
+}
+@media (min-width: 992px) {
+    .border-end-lg {
+        border-right: 1px solid #e9ecef !important;
+    }
+}
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand font-weight-bold" href="#">
+      <i class="fas fa-building text-primary mr-2"></i>Land and Building
+    </a>
+
+    <!-- Mobile Toggle Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links & Button -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto align-items-lg-center">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#properties">Properties</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item mt-2 mt-lg-0 ml-lg-3">
+          <a href="#" class="btn btn-outline-primary btn-sm px-3 py-2">Login / Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero-section py-5" style="min-height: auto; height: auto;">
+    <div class="container">
+        <!-- Hero Text Content -->
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <span class="badge bg-white text-dark px-3 py-2 mb-3 shadow-sm">
+                    BUY • SELL • RENT
+                </span>
+
+                <h1 class="display-5 fw-bold text-white">
+                    Your Perfect Property
+                    <br>
+                    Starts Here
+                </h1>
+
+                <p class="lead text-white mt-3">
+                    Find your dream home, land or building with our easy property search.
+                </p>
+            </div>
+        </div>
+
+        <!-- Search Box -->
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-10 px-2 px-sm-3">
+                <div class="card border-0 shadow-lg rounded-4 p-3 p-md-4 mt-4 bg-white" style="height: auto !important; max-height: none !important; overflow: visible !important;">
+                    <div class="row g-3 align-items-end">
+
+                        <!-- Location -->
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <label class="form-label fw-bold text-secondary small mb-1">
+                                Location
+                            </label>
+                            <input type="text" 
+                                   class="form-control bg-light border-0 py-2" 
+                                   placeholder="Enter location">
+                        </div>
+
+                        <!-- Property Type -->
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <label class="form-label fw-bold text-secondary small mb-1">
+                                Property Type
+                            </label>
+                            <select class="form-select bg-light border-0 py-2">
+                                <option selected>Select Property</option>
+                                <option>House</option>
+                                <option>Land</option>
+                                <option>Building</option>
+                            </select>
+                        </div>
+
+                        <!-- Price Range -->
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <label class="form-label fw-bold text-secondary small mb-1">
+                                Price Range
+                            </label>
+                            <select class="form-select bg-light border-0 py-2">
+                                <option selected>Select Price</option>
+                                <option>Below 50 Lac</option>
+                                <option>50 Lac - 1 Crore</option>
+                                <option>Above 1 Crore</option>
+                            </select>
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <button class="btn text-white w-100 py-2 fw-bold shadow-sm d-flex align-items-center justify-content-center gap-1"
+                                    style="background-color: #526eb4; white-space: nowrap;">
+                                <i class="bi bi-search"></i> Search Property
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================= FEATURED PROPERTIES ================= -->
+
+<!-- Features Strip Section -->
+<section class="py-5 bg-white border-bottom">
+    <div class="container">
+        <div class="row g-4 justify-content-center text-center align-items-stretch">
+
+            <!-- Feature 1 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg border-end-lg d-flex flex-column align-items-center">
+                <div class="d-flex align-items-center justify-content-center bg-opacity-10 text-primary rounded-circle mb-3"
+     style="width: 55px; height: 55px;">
+    <i class="fa-solid fa-house fa-lg"></i>
+</div>
+                <h6 class="fw-bold text-dark mb-2 fs-6">Wide Range of Properties</h6>
+                <p class="text-muted small mb-0 px-2" style="font-size: 13px;">Residential, commercial and land options.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg border-end-lg d-flex flex-column align-items-center">
+                <div class="d-flex align-items-center justify-content-center  bg-opacity-10 text-success rounded-circle mb-3" style="width: 55px; height: 55px;">
+                   <i class="fa-solid fa-shield-halved fa-lg"></i>
+                </div>
+                <h6 class="fw-bold text-dark mb-2 fs-6">Secure Transactions</h6>
+                <p class="text-muted small mb-0 px-2" style="font-size: 13px;">Safe and reliable platform.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg border-end-lg d-flex flex-column align-items-center">
+                <div class="d-flex align-items-center justify-content-center rounded-circle mb-3" style="width: 55px; height: 55px; background-color: #f0eafc;">
+                    <i class="fas fa-comments fa-lg" style="color: #6f42c1;"></i>
+                </div>
+                <h6 class="fw-bold text-dark mb-2 fs-6">Real-Time Chat</h6>
+                <p class="text-muted small mb-0 px-2" style="font-size: 13px;">Connect directly with agents and owners.</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg border-end-lg d-flex flex-column align-items-center">
+                <div class="d-flex align-items-center justify-content-center  bg-opacity-10 text-danger rounded-circle mb-3" style="width: 55px; height: 55px;">
+                    <i class="fa-regular fa-calendar-days"></i>
+                </div>
+                <h6 class="fw-bold text-dark mb-2 fs-6">Flexible Booking</h6>
+                <p class="text-muted small mb-0 px-2" style="font-size: 13px;">Schedule visits and manage your plans.</p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg d-flex flex-column align-items-center">
+                <div class="d-flex align-items-center justify-content-center  bg-opacity-10 text-info rounded-circle mb-3" style="width: 55px; height: 55px;">
+                    <i class="fas fa-chart-line fa-lg"></i>
+                </div>
+                <h6 class="fw-bold text-dark mb-2 fs-6">Smart Tools</h6>
+                <p class="text-muted small mb-0 px-2" style="font-size: 13px;">Investment calculator, price prediction & more.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ================= 4TH SECTION ================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row align-items-center bg-light rounded-4 p-5">
+
+            <!-- Left Content -->
+            <div class="col-lg-5">
+
+                <small class="text-primary fw-bold">
+                    FIND YOUR DREAM PROPERTY
+                </small>
+
+                <h2 class="fw-bold text-dark mt-2">
+                    Ready to Find Your
+                    Perfect Property?
+                </h2>
+
+                <p class="text-muted mt-3">
+                    Explore thousands of properties and find
+                    the one that perfectly matches your needs,
+                    lifestyle and budget.
+                </p>
+
+                <button class="btn text-white px-4 py-2 mt-2"
+                        style="background-color: #526eb4;">
+
+                    Explore Properties
+                    <i class="bi bi-arrow-right ms-2"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- Middle Icon -->
+            <div class="col-lg-2 text-center">
+
+                <i class="bi bi-buildings-fill"
+                   style="font-size: 70px; color: #526eb4;">
+                </i>
+
+            </div>
+
+
+            <!-- Right Image -->
+            <div class="col-lg-5">
+    <img src="img/2.jpg" class="img-fluid rounded-5 img1" alt="Property">
+</div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="text-uppercase text-secondary fw-bold" style="font-size: 11px; letter-spacing: 2px;">Featured Properties</p>
+      <h2 class="fw-bold text-dark">Explore Our Latest Listings</h2>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 border-0" style="border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);">
+          <div class="position-relative">
+            <img src="img/2.jpg" alt="Modern House" class="w-100" style="height: 180px; object-fit: cover;">
+            <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-2" style="font-size: 11px; border-radius: 6px;">For Sale</span>
+          </div>
+          <div class="card-body p-3 d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="fw-bold text-dark mb-1" style="font-size: 16px;">Modern House</h5>
+              <p class="text-muted mb-3" style="font-size: 12px;">📍 DHA, Lahore</p>
+              <div class="d-flex justify-content-between text-secondary mb-3 pb-2 border-bottom" style="font-size: 12px;">
+                <span>🛏️ 4</span>
+                <span>🛁 3</span>
+                <span>📐 2,500 sqft</span>
+              </div>
+            </div>
+            <div>
+              <span class="text-muted" style="font-size: 11px; display: block;">Price</span>
+              <h6 class="fw-bold text-dark mb-0" style="font-size: 15px;">PKR 2,50,00,000</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 border-0" style="border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);">
+          <div class="position-relative">
+            <img src="img/1.jpg" alt="Luxury Apartment" class="w-100" style="height: 180px; object-fit: cover;">
+            <span class="badge bg-primary position-absolute top-0 start-0 m-3 px-3 py-2" style="font-size: 11px; border-radius: 6px;">For Rent</span>
+          </div>
+          <div class="card-body p-3 d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="fw-bold text-dark mb-1" style="font-size: 16px;">Luxury Apartment</h5>
+              <p class="text-muted mb-3" style="font-size: 12px;">📍 Bahria Town, Karachi</p>
+              <div class="d-flex justify-content-between text-secondary mb-3 pb-2 border-bottom" style="font-size: 12px;">
+                <span>🛏️ 3</span>
+                <span>🛁 2</span>
+                <span>📐 1,800 sqft</span>
+              </div>
+            </div>
+            <div>
+              <span class="text-muted" style="font-size: 11px; display: block;">Price</span>
+              <h6 class="fw-bold text-dark mb-0" style="font-size: 15px;">PKR 1,20,000 <span class="text-muted fw-normal" style="font-size: 11px;">/ month</span></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 border-0" style="border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);">
+          <div class="position-relative">
+            <img src="img/1.jpg" alt="Residential Plot" class="w-100" style="height: 180px; object-fit: cover;">
+            <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-2" style="font-size: 11px; border-radius: 6px;">For Sale</span>
+          </div>
+          <div class="card-body p-3 d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="fw-bold text-dark mb-1" style="font-size: 16px;">Residential Plot</h5>
+              <p class="text-muted mb-3" style="font-size: 12px;">📍 Faisalabad</p>
+              <div class="d-flex justify-content-between text-secondary mb-3 pb-2 border-bottom" style="font-size: 12px;">
+                <span>🛏️ -</span>
+                <span>🛁 -</span>
+                <span>📐 5 Marla</span>
+              </div>
+            </div>
+            <div>
+              <span class="text-muted" style="font-size: 11px; display: block;">Price</span>
+              <h6 class="fw-bold text-dark mb-0" style="font-size: 15px;">PKR 35,00,000</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 border-0" style="border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);">
+          <div class="position-relative">
+            <img src="img/2.jpg" alt="Commercial Shop" class="w-100" style="height: 180px; object-fit: cover;">
+            <span class="badge bg-primary position-absolute top-0 start-0 m-3 px-3 py-2" style="font-size: 11px; border-radius: 6px;">For Rent</span>
+          </div>
+          <div class="card-body p-3 d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="fw-bold text-dark mb-1" style="font-size: 16px;">Commercial Shop</h5>
+              <p class="text-muted mb-3" style="font-size: 12px;">📍 Gulberg, Lahore</p>
+              <div class="d-flex justify-content-between text-secondary mb-3 pb-2 border-bottom" style="font-size: 12px;">
+                <span>🛏️ -</span>
+                <span>🛁 -</span>
+                <span>📐 1,200 sqft</span>
+              </div>
+            </div>
+            <div>
+              <span class="text-muted" style="font-size: 11px; display: block;">Price</span>
+              <h6 class="fw-bold text-dark mb-0" style="font-size: 15px;">PKR 80,000 <span class="text-muted fw-normal" style="font-size: 11px;">/ month</span></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <p class="text-uppercase text-secondary fw-bold" style="font-size: 11px; letter-spacing: 2px;">What Our Clients Say</p>
+    <h2 class="fw-bold mb-5 text-dark">Trusted by Thousands</h2>
+    
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-4 shadow-sm bg-white border-0 text-center" style="border-radius: 12px; transition: transform 0.3s ease;">
+          <div class="card-body p-0 d-flex flex-column align-items-center justify-content-between">
+            <div>
+              <img src="img/2.jpg" alt="Sara Ahmed"  class="rounded-circle mb-3" style="width: 80px; height: 65px; object-fit: cover;">
+              <p class="text-secondary mb-4" style="font-size: 14px; line-height: 1.7;">“The platform is easy to use and the support team is very helpful. Found my dream house in a week!”</p>
+            </div>
+            <div class="w-100">
+              <h6 class="fw-semibold text-dark mb-1" style="font-size: 15px;">Sara Ahmed</h6>
+              <p class="text-muted mb-2" style="font-size: 12px;">Home Buyer</p>
+              <div class="text-warning" style="font-size: 14px; letter-spacing: 2px;">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-4 shadow-sm bg-white border-0 text-center" style="border-radius: 12px; transition: transform 0.3s ease;">
+          <div class="card-body p-0 d-flex flex-column align-items-center justify-content-between">
+            <div>
+              <img src="img/1.jpg" alt="Ali Raza" class="rounded-circle mb-3 shadow-sm" style="width: 80px; height: 65px; object-fit: cover;">
+              <p class="text-secondary mb-4" style="font-size: 14px; line-height: 1.7;">“Great experience! The property details are accurate and the process was smooth from start to finish.”</p>
+            </div>
+            <div class="w-100">
+              <h6 class="fw-semibold text-dark mb-1" style="font-size: 15px;">Ali Raza</h6>
+              <p class="text-muted mb-2" style="font-size: 12px;">Property Investor</p>
+              <div class="text-warning" style="font-size: 14px; letter-spacing: 2px;">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 p-4 shadow-sm bg-white border-0 text-center" style="border-radius: 12px; transition: transform 0.3s ease;">
+          <div class="card-body p-0 d-flex flex-column align-items-center justify-content-between">
+            <div>
+              <img src="img/logo1.jpg" alt="Zainab Khan" class="rounded-circle mb-3 shadow-sm" style="width: 80px; height: 65px; object-fit: cover;">
+              <p class="text-secondary mb-4" style="font-size: 14px; line-height: 1.7;">“I listed my shop for rent and got a good tenant within days. Highly recommended!”</p>
+            </div>
+            <div class="w-100">
+              <h6 class="fw-semibold text-dark mb-1" style="font-size: 15px;">Zainab Khan</h6>
+              <p class="text-muted mb-2" style="font-size: 12px;">Property Owner</p>
+              <div class="text-warning" style="font-size: 14px; letter-spacing: 2px;">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-white py-4" style="background-color: #1a202c; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+  <div class="container">
+    <div class="row align-items-center gy-3">
+      
+      <!-- Left Side: Logo & Brand Name -->
+      <div class="col-md-4 text-center text-md-start">
+        <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+          <!-- <div class="bg-primary rounded p-1 d-flex align-items-center justify-content-center" style="width: 30px; height: 30px;">
+            <span style="font-size: 14px;">🏠</span>
+          </div> -->
+          <div>
+            <h5 class="fw-bold mb-0" style="font-size: 16px;">Land and Building</h5>
+            <small class="text-secondary" style="font-size: 11px;">Find Your Dream Property</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center: Navigation Links -->
+      <div class="col-md-4 text-center">
+        <ul class="list-inline mb-0" style="font-size: 14px;">
+          <li class="list-inline-item me-3"><a href="#" class="text-white text-decoration-none">Home</a></li>
+          <li class="list-inline-item me-3"><a href="#" class="text-white text-decoration-none">Properties</a></li>
+          <li class="list-inline-item me-3"><a href="#" class="text-white text-decoration-none">About</a></li>
+          <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Side: Social Media Icons -->
+      <div class="col-md-4 text-center text-md-end">
+  <div class="d-flex justify-content-center justify-content-md-end align-items-center gap-3">
+    <a href="#"><img src="img/facebook (1).png" alt="Icon 1" style="width: 20px; height: 20px; object-fit: contain;"></a>
+    <a href="#"><img src="img/instagram.png" alt="Icon 2" style="width: 20px; height: 20px; object-fit: contain;"></a>
+    <a href="#"><img src="img/whatsapp.png" alt="Icon 3" style="width: 20px; height: 20px; object-fit: contain;"></a>
+    <a href="#"><img src="img/youtube.png" alt="Icon 4" style="width: 20px; height: 20px; object-fit: contain;"></a>
+  </div>
+</div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright Divider -->
+    <hr class="border-secondary my-3 opacity-25">
+    <div class="text-center">
+      <p class="text-secondary mb-0" style="font-size: 12px;">© 2026 Land and Building. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- ================= 4TH SECTION END ================= -->
+<!-- ================= FEATURED PROPERTIES END ================= -->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

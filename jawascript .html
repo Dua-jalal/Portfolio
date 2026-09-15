@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Basics</h1>
+
+    <!-- Script tag body ke end me aata hai -->
+    <script>
+        // Yahan apni JS likhein
+        // let name1 = prompt("Aapka naam kya hai?");
+        // console.log("Welcome " + name1);
+
+        // 1. User Input
+let score = Number(prompt("Apne marks enter karein (0-100):"));
+
+// 2. Condition Check & 3. Console Output
+if (score >= 80) {
+    console.log("Grade: A+ (Zabardast!)");
+} else if (score >= 60) {
+    console.log("Grade: B (Achha hai)");
+} else if (score >= 33) {
+    console.log("Grade: C (Pass)");
+} else {
+    console.log("Grade: Fail (Agle saal wapis try karein)");
+}
+
+let name = prompt("Aapka naam kya hai?");
+    
+    // Page par output show karne ke liye
+    document.write("<h1>Welcome " + name + "</h1>");
+
+
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Checker</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h3 class="card-title text-center mb-4">Number Checker</h3>
+            
+            <div class="mb-3">
+              <label for="userInput" class="form-label">Koi bhi number likhein:</label>
+              <input type="number" id="userInput" class="form-control" placeholder="e.g. 5 ya -3">
+            </div>
+
+            <button onclick="checkNumber()" class="btn btn-primary w-100">Check Karein</button>
+
+            <!-- Result alert box -->
+            <div id="result" class="alert mt-4 d-none" role="alert"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Code -->
+  <script>
+    function checkNumber() {
+      const inputVal = document.getElementById("userInput").value;
+      const resultDiv = document.getElementById("result");
+
+      // Khali input check karne ke liye
+      if (inputVal === "") {
+        resultDiv.className = "alert alert-warning mt-4";
+        resultDiv.innerText = "Barae meherbani koi number likhein!";
+        return;
+      }
+
+      const num = Number(inputVal);
+
+      // Positive, Negative ya Zero check karne ki logic
+      if (num > 0) {
+        resultDiv.className = "alert alert-success mt-4";
+        resultDiv.innerText = "Yeh number Positive (+) hai.";
+      } else if (num < 0) {
+        resultDiv.className = "alert alert-danger mt-4";
+        resultDiv.innerText = "Yeh number Negative (-) hai.";
+      } else {
+        resultDiv.className = "alert alert-info mt-4";
+        resultDiv.innerText = "Yeh number Zero (0) hai.";
+      }
+    }
+  </script>
+
+</body>
+</html>
+<script>
+    function checkNumber() {
+      const inputVal = document.getElementById("userInput").value;
+
+      if (inputVal === "") {
+        console.log("Warning: Input khali hai! Koi number darj karein.");
+        return;
+      }
+
+      const num = Number(inputVal);
+
+      if (num > 0) {
+        console.log("Result: " + num + " ek Positive (+) number hai.");
+      } else if (num < 0) {
+        console.log("Result: " + num + " ek Negative (-) number hai.");
+      } else {
+        console.log("Result: Yeh number Zero (0) hai.");
+      }
+    }
+  </script>
+   let marks= Number(prompt("please enter the marks"));
+    if(marks>0 || marks>100){
+        console.log("This is invalid num");
+    }
+    else if(marks>=90){
+        console.log("Grade: A");
+    }
+    else if (marks>=70){
+        console.log("Grade: B");
+    }
+else if (marks>=50){
+    console.log("Grade c: you are pass");
+
+}
+else if(marks>=33) {
+   console.log("you are pass")
+}
+else {
+    console.log("you are fail")
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container bg-white p-4 rounded shadow-sm" style="max-width: 400px;">
+        <h3 class="mb-3 text-primary text-center">Discount Calculator</h3>
+
+        <div class="mb-3">
+            <label class="form-label">Original Price (Rs.)</label>
+            <input type="number" id="price" class="form-control" placeholder="e.g. 1000">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Discount (%)</label>
+            <input type="number" id="discount" class="form-control" placeholder="e.g. 20">
+        </div>
+
+        <button onclick="calculateDiscount()" class="btn btn-primary w-100">Calculate</button>
+
+        <!-- Output Result Box -->
+        <div id="result" class="mt-4"></div>
+    </div>
+
+    <script>
+        function calculateDiscount() {
+            let price = Number(document.getElementById("price").value);
+            let discount = Number(document.getElementById("discount").value);
+            let resultDiv = document.getElementById("result");
+
+            // Input Validation
+            if (isNaN(price) || isNaN(discount) || price <= 0 || discount < 0 || discount > 100) {
+                resultDiv.innerHTML = `
+                    <div class="alert alert-danger" role="alert">
+                        Barae meherbani sahi price aur discount rate likhein!
+                    </div>`;
+                return;
+            }
+
+            // Logic Calculation
+            let discountAmount = (price * discount) / 100;
+            let finalPrice = price - discountAmount;
+
+            // Bootstrap Success Alert UI
+            resultDiv.innerHTML = `
+                <div class="alert alert-success" role="alert">
+                    <p class="mb-1"><strong>Discount Amount:</strong> Rs. ${discountAmount}</p>
+                    <hr class="my-2">
+                    <h5 class="mb-0"><strong>Final Price:</strong> Rs. ${finalPrice}</h5>
+                </div>`;
+        }
+    </script>
+</body>
+</html>
+
+let price = Number(prompt("Original Price enter karein:"));
+let discount = Number(prompt("Discount percentage (%) enter karein:"));
+
+// Validation: Out of range ya wrong inputs check karna
+if (isNaN(price) || isNaN(discount) || price <= 0 || discount < 0 || discount > 100) {
+  console.log("Error: Barae meherbani sahi price aur discount (%) enter karein.");
+} 
+else {
+  // Logic calculation
+  let discountAmount = (price * discount) / 100;
+  let finalPrice = price - discountAmount;
+
+  // Console outputs
+  console.log("--- Discount Result ---");
+  console.log("Original Price: Rs. " + price);
+  console.log("Discount (" + discount + "%): Rs. " + discountAmount);
+  console.log("Final Payable Price: Rs. " + finalPrice);
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap + JS Console Discount</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light p-5">
+
+    <div class="container bg-white p-4 rounded shadow-sm" style="max-width: 400px;">
+        <h3 class="text-primary text-center mb-3">Discount Calculator</h3>
+        
+        <div class="mb-3">
+            <label class="form-label">Original Price (Rs.)</label>
+            <input type="number" id="priceInput" class="form-control" placeholder="e.g. 1000">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Discount (%)</label>
+            <input type="number" id="discountInput" class="form-control" placeholder="e.g. 20">
+        </div>
+
+        <button onclick="calculateDiscount()" class="btn btn-primary w-100">Calculate (Check Console)</button>
+    </div>
+
+    <script>
+        function calculateDiscount() {
+            let price = Number(document.getElementById("priceInput").value);
+            let discount = Number(document.getElementById("discountInput").value);
+
+            // Validation
+            if (isNaN(price) || isNaN(discount) || price <= 0 || discount < 0 || discount > 100) {
+                console.log("Error: Invalid inputs entered!");
+                return;
+            }
+
+            // Calculation
+            let discountAmount = (price * discount) / 100;
+            let finalPrice = price - discountAmount;
+
+            // Console Outputs
+            console.log("=== DISCOUNT RESULT ===");
+            console.log("Original Price: Rs. " + price);
+            console.log("Discount Amount: Rs. " + discountAmount);
+            console.log("Final Price: Rs. " + finalPrice);
+        }
+    </script>
+</body>
+</html>
+
+
+<script>
+    let price = Number(prompt("Enter Price:"));
+    let discount = 0;
+
+    // Validation
+    if (price <= 0) {
+        console.log("Please enter a valid amount!");
+    } 
+    else {
+        // Multi-condition logic
+        if (price >= 100000) {
+            discount = 10; // 100,000 ya usse zyada par 10%
+        } 
+        else if (price >= 50000) {
+            discount = 7;  // 50,000 se 99,999 tak 7%
+        } 
+        else {
+            discount = 5;  // 50,000 se kam par 5%
+        }
+
+        // Calculation
+        let discountAmount = (price * discount) / 100;
+        let finalprice = price - discountAmount;
+
+        // Output
+        console.log("--- Discount Result ---");
+        console.log("Original Price: Rs. " + price);
+        console.log("Discount Rate: " + discount + "%");
+        console.log("Discount Amount: Rs. " + discountAmount);
+        console.log("Final Price: Rs. " + finalprice);
+    }
+</script>
